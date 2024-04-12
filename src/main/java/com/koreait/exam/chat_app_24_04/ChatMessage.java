@@ -9,22 +9,22 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Getter
 public class ChatMessage {
-  private long id;
-  @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss", timezone = "Asia/Seoul")
-  private LocalDateTime createTime;
-  private String authorName;
-  private String content;
+    private long id;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss", timezone = "Asia/Seoul")
+    private LocalDateTime createTime;
+    private String authorName;
+    private String content;
 
-  public ChatMessage(String authorName, String content) {
-    this(ChatMessageIdGenerator.getNextId(),LocalDateTime.now(),authorName,content);
-  }
+    public ChatMessage(String authorName, String content) {
+        this(ChatMessageIdGenerator.getNextId(),LocalDateTime.now(),authorName,content);
+    }
 
 }
 
 class ChatMessageIdGenerator{
-  public static long id = 0;
+    public static long id = 0;
 
-  public static long getNextId(){
-    return ++id;
-  }
+    public static long getNextId(){
+        return ++id;
+    }
 }

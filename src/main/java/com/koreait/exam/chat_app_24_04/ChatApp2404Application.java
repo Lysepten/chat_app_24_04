@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class ChatApp2404Application {
 
-  public static void main(String[] args) {
-    SpringApplication.run(ChatApp2404Application.class, args);
-  }
+    public static void main(String[] args) {
+        SpringApplication.run(ChatApp2404Application.class, args);
+    }
 
 }
